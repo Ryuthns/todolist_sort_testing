@@ -11,11 +11,11 @@ describe('Web Performance', () => {
                 title: "Buy eggs",
                 description: "",
                 finished: false,
-                favor:false,
+                favor:true,
                 summitted: false
             }
             // cy.route('POST','/api/todo');
-            for(let i = 0 ; i < 400 ; i++ ){
+            for(let i = 0 ; i < 100 ; i++ ){
                 cy.request('POST','http://localhost:8080/api/todo',data);
             }
     

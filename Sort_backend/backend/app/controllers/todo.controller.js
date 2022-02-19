@@ -2,6 +2,7 @@ const db = require("../models");
 const todo_list = db.todo_list;
 const Op = db.Sequelize.Op;
 const sequelize = require("sequelize");
+const { SequelizeScopeError } = require("sequelize");
 exports.create = (req, res) => {
     if (!req.body.title) {
         res.status(400).send({
